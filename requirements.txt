@@ -1,0 +1,12 @@
+pypdf
+langchain>=0.2.2
+torch
+accelerate
+bitsandbytes
+ctransformers
+sentence-transformers
+faiss-cpu
+chainlit
+huggingface_hub
+langchain_huggingface
+langchain-community
