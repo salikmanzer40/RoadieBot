@@ -34,7 +34,7 @@ def retrieval_qa_chain(llm, prompt, db):
 
 def load_llm():
     llm = CTransformers(
-        model=r"C:\Users\Salik\OneDrive\Desktop\RoadieBot\model",
+        model="model/llama-2-7b-chat.ggmlv3.q4_0.bin",
         model_type="llama",
         max_new_tokens=512,
         temperature=0.5
@@ -77,23 +77,3 @@ async def main(message: cl.Message):
         await cl.Message(content=answer).send()
     except Exception as e:
         await cl.Message(content=f"Error: {str(e)}").send()
-
-from langchain_huggingface import HuggingFaceEmbeddings
-from langchain_community.vectorstores import FAISS
-from langchain_community.document_loaders import PyPDFLoader, DirectoryLoader
-from langchain.text_splitter import RecursiveCharacterTextSplitter 
-
-DATA_PATH = 'data/'
-DB_FAISS_PATH = 'vectorstore/db_faiss'
-
-def create_vector_db():
-    loader = DirectoryLoader(DATA_PATH, glob='*.pdf', loader_cls=PyPDFLoader)
-    documents = loader.load()
-    text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=50)
-    texts = text_splitter.split_documents(documents)
-    embeddings = HuggingFaceEmbeddings(model_name='sentence-transformers/all-MiniLM-L6-v2', model_kwargs={'device': 'cpu'})
-    db = FAISS.from_documents(texts, embeddings)
-    db.save_local(DB_FAISS_PATH)
-
-if __name__ == "__main__":
-    create_vector_db()

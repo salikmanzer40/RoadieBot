@@ -1,14 +1,27 @@
-# Welcome to Chainlit! 🚀🤖
+# Welcome to RoadieBot! 🚗🤖
 
-Hi there, Developer! 👋 We're excited to have you on board. Chainlit is a powerful tool designed to help you prototype, debug and share applications built on top of LLMs.
+Hi there! Welcome to RoadieBot, your intelligent automobile assistant.
 
-## Useful Links 🔗
+## What is RoadieBot?
 
-- **Documentation:** Get started with our comprehensive [Chainlit Documentation](https://docs.chainlit.io) 📚
-- **Discord Community:** Join our friendly [Chainlit Discord](https://discord.gg/k73SQ3FyUh) to ask questions, share your projects, and connect with other developers! 💬
+RoadieBot is a smart chatbot designed to help you with automobile-related questions. Whether you need troubleshooting advice, maintenance tips, or answers to FAQs for commercial vehicles, RoadieBot is here to assist you.
 
-We can't wait to see what you create with Chainlit! Happy coding! 💻😊
+## Features
 
-## Welcome screen
+- 🔧 **Troubleshooting Support**: Get help diagnosing vehicle issues
+- 🛠️ **Maintenance Tips**: Learn about proper vehicle maintenance
+- ❓ **FAQ Answers**: Find answers to common commercial vehicle questions
+- 📚 **Knowledge Base**: Powered by detailed PDF documentation
 
-To modify the welcome screen, edit the `chainlit.md` file at the root of your project. If you do not want a welcome screen, just leave this file empty.
+## How to Use
+
+Simply type your question in the chat below, and RoadieBot will provide accurate and reliable information based on its knowledge base.
+
+**Example questions:**
+- "How do I troubleshoot engine problems?"
+- "What maintenance should I perform on my commercial vehicle?"
+- "What are common issues with [vehicle type]?"
+
+---
+
+*Note: RoadieBot provides information based on its training data. For critical vehicle issues, always consult with a qualified mechanic.*
